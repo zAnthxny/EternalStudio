@@ -67,3 +67,9 @@ Es normal. Usa:
 3. Verifica el estado del snapshot.
 4. Revisa `audit-log.yml`.
 5. Exporta auditoria si necesitas evidencia externa.
+
+##Nota: 
+
+- Se recomienda probar el plugin en un servidor de prueba (TestServer) para una configuración optima. 
+
+[Inicio](./index.md)
