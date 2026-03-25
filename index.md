@@ -6,7 +6,7 @@ InvRollback+ es un plugin de administracion para servidores de Minecraft orienta
 
 | Dato | Valor |
 | --- | --- |
-| Nombre del plugin | `InvRestore` |
+| Nombre del plugin | `InvRollback+` |
 | Version actual | `1.1.0` |
 | Autor actual detectado | `zAnthxny_` |
 | Categoria | `Administracion / Rollback / Staff Tools` |
@@ -19,9 +19,9 @@ InvRollback+ es un plugin de administracion para servidores de Minecraft orienta
 | Base de datos | `SQLite y MySQL` |
 | Sitio oficial / Discord / soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
-## Que hace InvRestore
+## Que hace InvRollback+
 
-InvRestore guarda snapshots completos cuando un jugador muere, permite inspeccionar esas muertes desde una GUI in-game, enviar solicitudes de restauracion a Discord con una razon personalizada y aprobar, rechazar o dejar en cola cada rollback desde botones y modales. Toda la informacion principal del sistema ahora se almacena en base de datos para una operacion mas limpia, escalable y profesional.
+InvRollback+ guarda snapshots completos cuando un jugador muere, permite inspeccionar esas muertes desde una GUI in-game, enviar solicitudes de restauracion a Discord con una razon personalizada y aprobar, rechazar o dejar en cola cada rollback desde botones y modales. Toda la informacion principal del sistema ahora se almacena en base de datos para una operacion mas limpia, escalable y profesional.
 
 ## Caracteristicas principales
 
@@ -35,7 +35,7 @@ InvRestore guarda snapshots completos cuando un jugador muere, permite inspeccio
 - Sistema de auditoria con almacenamiento en base de datos y exportacion a YAML o JSON.
 - Soporte nativo para `SQLite` y `MySQL`.
 - Backups automaticos previos a la restauracion.
-- Controles opcionales para exigir inventarios vacios antes de aplicar un restore.
+- Controles opcionales para exigir inventarios vacios antes de aplicar un Rollback+.
 - Configuracion reorganizada y mas presentable para entornos comerciales.
 
 ## Beneficios
