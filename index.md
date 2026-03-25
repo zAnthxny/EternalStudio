@@ -19,8 +19,7 @@ Esta documentacion esta pensada para uso interno, publicacion en GitHub y adapta
 | Dependencias de otros plugins | `Ninguna` |
 | Integracion externa | `Discord mediante bot JDA` |
 | Base de datos | `SQLite y MySQL` |
-| Licencia | `[POR COMPLETAR]` |
-| Sitio oficial / Discord / soporte | `[POR COMPLETAR]` |
+| Sitio oficial / Discord / soporte | `[[Discord](https://discord.gg/VHDmGMgBUV)]` |
 
 ## Que hace InvRestore
 
