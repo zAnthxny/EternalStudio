@@ -54,7 +54,7 @@ El flujo actual esta fuertemente orientado a Discord. Sin bot conectado, no podr
 
 ### No puedo volver a solicitar una muerte restaurada
 
-Es normal. Usa:
+Es normal. Utiliza:
 
 ```text
 /invrestore unlock <ID>
