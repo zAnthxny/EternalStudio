@@ -1,8 +1,6 @@
-# InvRestore
+# InvRollback+
 
-InvRestore es un plugin de administracion para servidores de Minecraft orientado al registro de muertes, inspeccion de inventarios perdidos y gestion de restauraciones con flujo de aprobacion en Discord, ahora con almacenamiento en base de datos `SQLite` o `MySQL`.
-
-Esta documentacion esta pensada para uso interno, publicacion en GitHub y adaptacion posterior a GitHub Wiki, GitBook, BuiltByBit, Spigot o una web oficial. Todo el contenido se basa en el estado real del proyecto actual. Cuando un dato comercial o de marca no esta confirmado, queda marcado como `[POR COMPLETAR]`.
+InvRollback+ es un plugin de administracion para servidores de Minecraft orientado al registro de muertes, inspeccion de inventarios perdidos y gestion de restauraciones con flujo de aprobacion en Discord, ahora con almacenamiento en base de datos `SQLite` o `MySQL`.
 
 ## Resumen rapido
 
@@ -89,7 +87,6 @@ Para cambiar el tipo de base de datos, revisa [Configuracion](./configuracion.md
 - `Minecraft 1.21.10`
 - `Minecraft 1.21.11`
 
-## Soporte y venta
+## Soporte
 
-- Discord de soporte: `[POR COMPLETAR]`
-- Plataforma de venta principal: `[POR COMPLETAR]`
+- Discord de soporte: [Discord](https://discord.gg/EdYjfEyWaw)
