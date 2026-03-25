@@ -17,7 +17,7 @@ InvRollback+ es un plugin de administracion para servidores de Minecraft orienta
 | Dependencias de otros plugins | `Ninguna` |
 | Integracion externa | `Discord mediante bot JDA` |
 | Base de datos | `SQLite y MySQL` |
-| Sitio oficial / Discord / soporte | [Discord](https://discord.gg/EdYjfEyWaw) |
+| Sitio oficial / Discord / soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
 ## Que hace InvRestore
 
@@ -89,4 +89,4 @@ Para cambiar el tipo de base de datos, revisa [Configuracion](./configuracion.md
 
 ## Soporte
 
-- Discord de soporte: [Discord](https://discord.gg/EdYjfEyWaw)
+- Discord de soporte: [EternalStudio](https://discord.gg/EdYjfEyWaw)
