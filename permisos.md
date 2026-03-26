@@ -96,4 +96,4 @@ El permiso `rollback.admin.all` incluye:
 - La aprobacion y el rechazo desde Discord no dependen de permisos de Minecraft, sino del control de roles configurado en Discord.
 - Si el rol de Discord es la capa principal de aprobacion, puedes reservar en Minecraft solo los permisos de consulta y solicitud.
 
-La operativa completa de cada comando esta documentada en [comandos.md](comandos.md).
+La operativa completa de cada comando esta documentada en [Comandos](comandos.md).
