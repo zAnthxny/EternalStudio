@@ -98,19 +98,15 @@ Para acelerar una respuesta de calidad, el usuario deberia enviar:
 
 ### Canales
 
-- Discord de soporte: `[POR COMPLETAR]`
-- Sitio web: `[POR COMPLETAR]`
-- Email o formulario: `[POR COMPLETAR]`
-- Reporte de bugs: `[POR COMPLETAR]`
-- Sugerencias de funciones: `[POR COMPLETAR]`
+- Discord de soporte [EternalStudio](https://discord.gg/EdYjfEyWaw)
 
 ### Recomendacion operativa
 
 Antes de abrir un ticket:
 
-1. reproduce el caso una vez mas en un entorno controlado
-2. confirma si el problema es de Discord, base de datos o permisos
-3. intenta exportar auditoria o revisar logs del jugador
+1. Reproduce el caso una vez mas en un entorno controlado
+2. Confirma si el problema es de Discord, base de datos o permisos
+3. Intenta exportar auditoria o revisar logs del jugador
 
 ## Licencia y terminos de uso
 
