@@ -56,15 +56,6 @@ Esta pagina cubre la instalacion desde cero, la primera ejecucion del plugin y l
 7. Vuelve a iniciar el servidor.
 8. Verifica que no aparezcan errores de base de datos ni de Discord en consola.
 
-Artefactos observados en este proyecto:
-
-| Archivo | Uso esperado |
-| --- | --- |
-| `target/InvRollback-dev-1.1.0.jar` | Build de desarrollo |
-| `target/InvRollback.jar` | Salida final de release/ofuscacion en este proyecto |
-
-Si vas a distribuir una build comercial, confirma el nombre final del artefacto publico antes de publicar la wiki en marketplaces.
-
 ## Primera ejecucion
 
 En el primer arranque, el plugin:
