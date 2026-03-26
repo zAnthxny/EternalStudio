@@ -198,8 +198,8 @@ InvRollback encaja especialmente bien en:
 
 ### Soporte
 
--| Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
+- | Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
-## Texto comercial corto para marketplaces
+## NOTA:
 
 > InvRollback profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores.
