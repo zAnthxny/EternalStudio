@@ -194,4 +194,4 @@ Solucion:
 2. abre la GUI y confirma el estado del snapshot
 3. revisa los mensajes del plugin en consola
 
-La referencia completa de configuracion esta en [configuracion.md](Configuracion).
+La referencia completa de configuracion esta en [Configuracion](configuracion.md).
