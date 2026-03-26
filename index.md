@@ -17,7 +17,7 @@ InvRollback+ es un plugin de administracion para servidores de Minecraft orienta
 | Dependencias externas de plugins | Ninguna |
 | Integracion principal | Discord mediante bot JDA |
 | Idiomas incluidos | `es`, `en` |
-| Discord de soporte | [[EternalStudio]](https://discord.gg/EdYjfEyWaw) |
+| Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
 ## Mapa de la wiki
 
@@ -38,15 +38,15 @@ InvRollback resuelve un problema muy concreto en servidores serios: recuperar in
 
 En lugar de depender de restauraciones manuales, evidencia incompleta o decisiones tomadas en caliente, el plugin registra cada muerte con informacion util para soporte:
 
-- inventario principal
-- armadura
-- offhand
+- Inventario principal
+- Armadura
+- Offhand
 - Ender Chest
-- experiencia
-- servidor y ubicacion
-- fecha exacta
-- razon visible de la muerte
-- resumen estadistico de items valiosos
+- Experiencia
+- Servidor y ubicacion
+- Fecha exacta
+- Razon visible de la muerte
+- Resumen estadistico de items valiosos
 
 Sobre ese registro, el staff puede inspeccionar la perdida, solicitar aprobacion a Discord, y aplicar una restauracion completa, parcial o mucho mas precisa segun el caso.
 
@@ -74,12 +74,12 @@ Si `protections.save-combat-logout-snapshots` esta activo, el plugin detecta act
 El staff puede abrir una GUI paginada con filtros por estado y busqueda por:
 
 - ID de muerte
-- fecha
-- mundo
-- coordenadas
-- motivo
-- estado
-- categoria
+- Fecha
+- Mundo
+- Coordenadas
+- Motivo
+- Estado
+- Categoria
 
 ### 4. Vista de inspeccion real
 
@@ -95,27 +95,27 @@ Ademas de las opciones generales, el embed incluye el menu `Otros`, pensado para
 
 Segun el snapshot, Discord puede aprobar:
 
-- restauracion completa
-- solo inventario
-- solo armadura
-- solo offhand
-- solo experiencia
-- solo Ender Chest
-- una o varias piezas/herramientas especificas desde `Otros`
+- Restauracion completa
+- Solo inventario
+- Solo armadura
+- Solo offhand
+- Solo experiencia
+- Solo Ender Chest
+- Una o varias piezas/herramientas especificas desde `Otros`
 
 Si una seccion no existe en ese snapshot, la opcion simplemente no aparece.
 
 Dentro de `Otros`, el staff puede seleccionar una o varias opciones en la misma aprobacion, por ejemplo:
 
-- espada
-- pico
-- hacha
-- pala
-- casco
-- pechera
-- pantalon
-- botas
-- offhand
+- Espada
+- Pico
+- Hacha
+- Pala
+- Casco
+- Pechera
+- Pantalon
+- Botas
+- Offhand
 
 Eso permite aprobar devoluciones mucho mas quirurgicas, como devolver solo una espada y un pico, o una pechera junto con el offhand, sin restaurar todo el inventario o toda la armadura.
 
@@ -127,25 +127,25 @@ Si un rollback se aprueba cuando el jugador esta desconectado, el plugin lo deja
 
 El sistema incluye varias capas de seguridad:
 
-- backup automatico antes de restaurar
-- opcion para exigir que las secciones objetivo esten vacias
-- bloqueo de snapshots ya restaurados
-- reapertura manual de solicitudes rechazadas
-- desbloqueo manual de snapshots restaurados si el staff decide permitir una nueva restauracion
+- Backup automatico antes de restaurar
+- Opcion para exigir que las secciones objetivo esten vacias
+- Bloqueo de snapshots ya restaurados
+- Reapertura manual de solicitudes rechazadas
+- Desbloqueo manual de snapshots restaurados si el staff decide permitir una nueva restauracion
 
 ### 9. Auditoria real
 
 Cada accion importante puede quedar registrada:
 
-- solicitud
-- aprobacion en cola
-- restauracion aplicada
-- entrega automatica
-- rechazo
-- cancelacion
-- reapertura
-- desbloqueo
-- expiracion por timeout
+- Solicitud
+- Aprobacion en cola
+- Restauracion aplicada
+- Entrega automatica
+- Rechazo
+- Cancelacion
+- Reapertura
+- Desbloqueo
+- Expiracion por timeout
 
 Ademas, la auditoria puede exportarse desde comando.
 
@@ -170,11 +170,11 @@ Ademas, la auditoria puede exportarse desde comando.
 
 InvRollback encaja especialmente bien en:
 
-- survival con economia y staff activo
-- servidores PvP o factions con disputas frecuentes
-- modalidades donde una muerte por bug, lag o error administrativo debe revisarse con evidencia
-- redes con varios miembros de staff que necesitan trazabilidad
-- proyectos premium que quieren dar soporte serio y no improvisado
+- Survival con economia y staff activo
+- Servidores PvP o factions con disputas frecuentes
+- Modalidades donde una muerte por bug, lag o error administrativo debe revisarse con evidencia
+- Redes con varios miembros de staff que necesitan trazabilidad
+- Proyectos premium que quieren dar soporte serio y no improvisado
 
 ## Casos de uso rapidos
 
@@ -198,8 +198,7 @@ InvRollback encaja especialmente bien en:
 
 ### Soporte
 
-- Discord: `[POR COMPLETAR]`
-- Reporte de bugs: `[POR COMPLETAR]`
+-| Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
 ## Texto comercial corto para marketplaces
 
