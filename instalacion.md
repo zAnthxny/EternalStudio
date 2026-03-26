@@ -194,11 +194,4 @@ Solucion:
 2. abre la GUI y confirma el estado del snapshot
 3. revisa los mensajes del plugin en consola
 
-## Recomendaciones antes de pasar a produccion
-
-- Haz una prueba completa de muerte, solicitud, aprobacion y restauracion.
-- Valida tambien el caso de aprobacion con jugador offline.
-- Exporta auditoria una vez para confirmar permisos de escritura.
-- Respaldar `config.yml`, `lang/` y la base de datos antes de cambios grandes.
-
-La referencia completa de configuracion esta en [configuracion.md](configuracion.md).
+La referencia completa de configuracion esta en [configuracion.md](Configuracion).
