@@ -198,7 +198,7 @@ InvRollback encaja especialmente bien en:
 
 ### Soporte
 
-| Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
+- Discord de soporte [EternalStudio](https://discord.gg/EdYjfEyWaw) |
 
 ## NOTA:
 
