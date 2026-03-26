@@ -37,14 +37,14 @@ Los filtros soportados por comando y GUI son:
 - Solo puede abrirlo un jugador dentro del servidor.
 - Carga hasta `45` snapshots por pagina.
 - La busqueda puede coincidir con:
-  - nombre de jugador
+  - Nombre de jugador
   - `death_id`
-  - fecha
-  - mundo
-  - coordenadas
-  - categoria
-  - motivo
-  - estado
+  - Fecha
+  - Mundo
+  - Coordenadas
+  - Categoria
+  - Motivo
+  - Estado
 
 Ejemplos:
 
@@ -61,8 +61,8 @@ Ejemplos:
 Recarga:
 
 - `config.yml`
-- idioma activo
-- conexion de base de datos
+- Idioma activo
+- Conexion de base de datos
 
 Ademas intenta reiniciar el bot solo si hace falta. Si el token cambio durante un reload, el propio codigo advierte que el reinicio completo del servidor es la via mas segura.
 
@@ -95,16 +95,16 @@ Ejemplo:
 
 Muestran:
 
-- muertes totales
-- abiertas
-- pendientes
-- en cola
-- restauradas
-- rechazadas
-- solicitudes auditadas
-- restores auditados
-- tasa de rechazo
-- fecha de la ultima muerte
+- Muertes totales
+- Abiertas
+- Pendientes
+- En cola
+- Restauradas
+- Rechazadas
+- Solicitudes auditadas
+- Restores auditados
+- Tasa de rechazo
+- Fecha de la ultima muerte
 
 ### `/invrollback history <jugador> [filtro] [busqueda]`
 
@@ -145,10 +145,10 @@ Ejemplos:
 
 Desde `/invrollback <jugador>` el staff puede:
 
-- cambiar de pagina
-- rotar filtros
-- ver cantidad total y visible
-- abrir un snapshot concreto
+- Cambiar de pagina
+- Rotar filtros
+- Ver cantidad total y visible
+- Abrir un snapshot concreto
 
 ### Menu de inspeccion
 
@@ -185,19 +185,19 @@ Tambien se puede cancelar el prompt escribiendo `cancelar` o `cancel`.
 
 Cuando la solicitud llega a Discord:
 
-- se crea un embed con datos del caso
-- se adjunta una preview visual del inventario si fue posible generarla
-- aparece un selector con tipos de restauracion validos y opcion de rechazo
+- Se crea un embed con datos del caso
+- Se adjunta una preview visual del inventario si fue posible generarla
+- Aparece un selector con tipos de restauracion validos y opcion de rechazo
 
 Si el moderador aprueba:
 
-- con jugador online: el rollback se aplica al momento
-- con jugador offline: queda `QUEUED` y se entrega en el siguiente login
+- Con jugador online: el rollback se aplica al momento
+- Con jugador offline: queda `QUEUED` y se entrega en el siguiente login
 
 Si el moderador rechaza:
 
-- el snapshot pasa a `DENIED`
-- el jugador puede ser notificado si la opcion de notificaciones esta activa
+- El snapshot pasa a `DENIED`
+- El jugador puede ser notificado si la opcion de notificaciones esta activa
 
 ## Ejemplos practicos listos para copiar
 
@@ -210,19 +210,19 @@ Si el moderador rechaza:
 
 Proceso sugerido:
 
-1. abre la muerte
-2. revisa items y ubicacion
-3. solicita rollback con razon `lag`
-4. aprueba en Discord
+1. Abre la muerte
+2. Revisa items y ubicacion
+3. Solicita rollback con razon `lag`
+4. Aprueba en Discord
 
 ### Caso 2: jugador offline al momento de aprobar
 
 No requiere comando especial. El flujo normal es:
 
-1. solicitud enviada
-2. aprobacion en Discord
-3. snapshot marcado `QUEUED`
-4. restauracion automatica al volver a entrar
+1. Solicitud enviada
+2. Aprobacion en Discord
+3. Snapshot marcado `QUEUED`
+4. Restauracion automatica al volver a entrar
 
 ### Caso 3: apelacion despues de rechazo
 
@@ -256,10 +256,10 @@ No requiere comando especial. El flujo normal es:
 
 El comando incluye tab completion para:
 
-- subcomandos disponibles segun permisos
-- jugadores conocidos
-- `death_id` pendientes, rechazados o restaurados
-- formatos `yml` y `json`
-- filtros soportados
+- Subcomandos disponibles segun permisos
+- Jugadores conocidos
+- `death_id` Pendientes, rechazados o restaurados
+- Formatos `yml` y `json`
+- Filtros soportados
 
-La referencia de permisos esta en [permisos.md](permisos.md).
+La referencia de permisos esta en [Permisos](permisos.md).
