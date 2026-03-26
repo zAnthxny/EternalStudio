@@ -1,4 +1,4 @@
-<img src="./eternal.png" alt="Logo" width="220">
+<img src="./image" alt="Logo" width="220">
 
 # InvRollback
 
