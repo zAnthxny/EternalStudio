@@ -1,3 +1,5 @@
+<img src="./eternal.png" alt="Logo" width="220">
+
 # InvRollback
 
 InvRollback+ es un plugin de administracion para servidores de Minecraft orientado al registro de muertes, inspeccion de inventarios perdidos y gestion de restauraciones con flujo de aprobacion en Discord con almacenamiento en base de datos `SQLite` o `MySQL`.
