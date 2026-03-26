@@ -1,90 +1,221 @@
 # Instalacion
 
+Esta pagina cubre la instalacion desde cero, la primera ejecucion del plugin y los problemas de arranque mas comunes.
+
 ## Requisitos previos
 
-| Requisito | Estado |
-| --- | --- |
-| Servidor Paper | Obligatorio |
-| Minecraft `1.21.4 - 1.21.11` | Objetivo de soporte |
-| Java 21 | Obligatorio |
-| Token de bot de Discord | Necesario si usaras aprobaciones por Discord |
-| Canal de logs en Discord | Recomendado |
-| Rol administrativo en Discord | Recomendado |
+| Requisito | Necesario | Detalle |
+| --- | --- | --- |
+| Java | Si | `Java 21` |
+| Servidor | Si | `Paper 1.21.4 - 1.21.11` |
+| Conexion a disco | Si | El plugin necesita escribir configuracion, idiomas, base de datos y exports |
+| Discord bot | Recomendado | Necesario para el flujo de aprobacion desde Discord |
+| MySQL | Opcional | Solo si usaras `database.type: MYSQL` |
+| Otros plugins | No | No se detectaron dependencias obligatorias de plugins externos |
 
 ## Compatibilidad exacta
 
-### Confirmada por el proyecto
+| Elemento | Estado |
+| --- | --- |
+| `Paper 1.21.4 - 1.21.11` | Objetivo del proyecto |
+| `api-version: 1.21` | Declarado |
+| `SQLite` | Integrado |
+| `MySQL` | Integrado |
+| `Discord / JDA` | Integrado |
+| `PlaceholderAPI` | No necesario |
+| `Vault` | No necesario |
+| `Folia` | Pendiente de confirmacion |
 
-- `Paper 1.21.x`
-- `api-version: 1.21`
-- `Java 21`
+## Dependencias obligatorias y opcionales
 
-### Pendiente de confirmacion
+### Obligatorio
 
-- `Purpur`
-- `Spigot`
-- `Folia`
+- Un servidor `Paper` compatible.
+- `Java 21`.
+- El archivo `.jar` del plugin.
 
-## Dependencias obligatorias
+### Opcional
 
-InvRestore no requiere otros plugins como Vault, PlaceholderAPI o Citizens.
+- Un bot de Discord con acceso al canal donde se aprobaran solicitudes.
+- Un servidor `MySQL` si no quieres usar `SQLite`.
+- Un webhook de Discord si quieres duplicar la auditoria fuera del canal principal.
 
 ## Instalacion desde cero
 
-1. Descarga el jar compilado de InvRestore.
-2. Apaga tu servidor.
-3. Coloca el archivo en la carpeta `plugins/`.
-4. Inicia el servidor una vez para generar la configuracion.
-5. Deten el servidor.
-6. Edita `plugins/InvRestore/config.yml`.
-7. Configura el token del bot de Discord y el canal donde llegaran las solicitudes.
-8. Inicia de nuevo el servidor.
+### Opcion A: instalacion normal en produccion
 
-## Recomendacion de seguridad para el token
+1. Deten el servidor.
+2. Copia el `.jar` de `InvRollback` a la carpeta `plugins/`.
+3. Inicia el servidor para que el plugin genere sus archivos.
+4. Deten el servidor nuevamente.
+5. Edita `plugins/InvRollback/config.yml`.
+6. Si usaras Discord, configura:
+   - `discord.log-channel-id`
+   - `discord.admin-role-ids`
+   - `discord.bot-token` o, preferiblemente, el argumento `-Ddiscord.token=TU_TOKEN`
+7. Vuelve a iniciar el servidor.
+8. Verifica que no aparezcan errores de base de datos ni de Discord en consola.
 
-La via preferida es iniciar el servidor con:
+### Opcion B: compilar desde este repositorio
 
-```text
--Ddiscord.token=TU_TOKEN
+Comando de build:
+
+```powershell
+.\mvnw.cmd -DskipTests package
 ```
 
-Si no lo haces, el plugin intentara usar `discord.bot-token` desde `config.yml`.
+Artefactos observados en este proyecto:
 
-## Archivos que se generan
+| Archivo | Uso esperado |
+| --- | --- |
+| `target/InvRollback-dev-1.1.0.jar` | Build de desarrollo |
+| `target/InvRollback.jar` | Salida final de release/ofuscacion en este proyecto |
+
+Si vas a distribuir una build comercial, confirma el nombre final del artefacto publico antes de publicar la wiki en marketplaces.
+
+## Primera ejecucion
+
+En el primer arranque, el plugin:
+
+- carga `config.yml`
+- inicializa el sistema de idioma
+- abre la base de datos elegida
+- crea las tablas necesarias si no existen
+- registra listeners y comandos
+- intenta conectar el bot de Discord
+- activa el monitor de timeout para solicitudes pendientes
+
+Si el token de Discord no esta configurado o sigue usando el placeholder, el plugin puede seguir cargando, pero el flujo de solicitudes hacia Discord no funcionara.
+
+## Archivos y carpetas generados
+
+Ubicacion esperada en un servidor:
 
 ```text
-plugins/InvRestore/
-├─ config.yml
-├─ audit-log.yml
-├─ deaths/
-│  └─ <uuid>.yml
-└─ exports/
-   ├─ audit-log-<fecha>.yml
-   └─ audit-log-<fecha>.json
+plugins/
+  InvRollback/
+    config.yml
+    lang/
+      es.yml
+      en.yml
+    database/
+      invrestore.db
+    exports/
 ```
 
-## Verificacion basica
+Notas importantes:
 
-- confirma que el plugin se habilite sin errores
-- confirma que el bot de Discord se conecte si esta configurado
-- confirma que `/invrestore` exista
+- `lang/es.yml` y `lang/en.yml` se generan en la primera carga.
+- `database/invrestore.db` se crea cuando usas `SQLite`.
+- `exports/` se crea la primera vez que exportas auditoria.
+- Si cambias a `MySQL`, el archivo SQLite puede quedar como respaldo historico local.
+
+## Que hace cada archivo
+
+| Archivo o carpeta | Funcion |
+| --- | --- |
+| `config.yml` | Configuracion principal del plugin |
+| `lang/es.yml` | Mensajes en espanol editables |
+| `lang/en.yml` | Mensajes en ingles editables |
+| `database/invrestore.db` | Base de datos local cuando usas SQLite |
+| `exports/` | Exportaciones de auditoria en `yml` o `json` |
+
+## Recomendacion de arranque rapido
+
+### Servidor pequeno o mediano
+
+Usa `SQLite` si:
+
+- el servidor es una sola instancia
+- el volumen de muertes no es extremo
+- quieres instalar rapido
+- prefieres administracion simple
+
+### Red o servidor con mucho volumen
+
+Usa `MySQL` si:
+
+- tienes varios mundos con actividad alta
+- el staff consulta mucho historial y auditoria
+- quieres respaldos y monitoreo mas estables
+- prefieres separar datos del disco local del servidor de juego
+
+## Checklist de instalacion minima
+
+- `Java 21` confirmado
+- `Paper 1.21.x` confirmado
+- jar colocado en `plugins/`
+- `config.yml` generado
+- idioma elegido
+- base de datos configurada
+- token de Discord configurado si usaras aprobaciones
+- `log-channel-id` correcto
+- uno o mas `admin-role-ids` correctos
 
 ## Errores comunes de instalacion
 
-### El plugin no carga
+### El plugin carga, pero Discord no funciona
 
-- usa `Java 21`
-- verifica que el servidor sea `Paper 1.21.x`
-- reemplaza el jar si esta corrupto
+Causa comun:
 
-### El bot de Discord no inicia
+- el token sigue siendo `TOKEN_EN_STARTUP_ARGUMENTS`
+- el canal configurado no existe
+- el bot no esta en el servidor de Discord
 
-- revisa el token
-- reemplaza el placeholder por un valor real
-- prueba `/invrestore reload`
+Solucion:
 
-### No aparece el canal de Discord
+1. configura el token real
+2. revisa `discord.log-channel-id`
+3. confirma permisos del bot en el canal
+4. reinicia el servidor
 
-- revisa `discord.log-channel-id`
-- confirma permisos del bot
-- verifica que el bot este en el servidor correcto
+## La consola muestra error de base de datos
+
+Causas comunes:
+
+- credenciales `MySQL` invalidas
+- host o puerto incorrecto
+- carpeta SQLite sin permisos de escritura
+
+Solucion:
+
+1. revisa `database.type`
+2. valida host, puerto, base, usuario y password
+3. confirma que el servidor puede escribir en `plugins/InvRollback/`
+
+## El plugin no genera snapshots
+
+Causas posibles:
+
+- el jugador murio sin items ni contenido util que guardar
+- el guardado esta filtrado por mundo o gamemode
+- el evento ocurre en un entorno no validado
+
+Solucion:
+
+1. revisa `storage.filters.enabled`
+2. valida `blocked-worlds` y `blocked-gamemodes`
+3. haz una prueba controlada con items en inventario
+
+## El plugin se activa, pero las solicitudes fallan
+
+Causas comunes:
+
+- bot no conectado
+- canal no encontrado
+- el snapshot ya esta pendiente o restaurado
+
+Solucion:
+
+1. usa `/invrollback info <jugador>`
+2. abre la GUI y confirma el estado del snapshot
+3. revisa los mensajes del plugin en consola
+
+## Recomendaciones antes de pasar a produccion
+
+- Haz una prueba completa de muerte, solicitud, aprobacion y restauracion.
+- Valida tambien el caso de aprobacion con jugador offline.
+- Exporta auditoria una vez para confirmar permisos de escritura.
+- Respaldar `config.yml`, `lang/` y la base de datos antes de cambios grandes.
+
+La referencia completa de configuracion esta en [configuracion.md](configuracion.md).
