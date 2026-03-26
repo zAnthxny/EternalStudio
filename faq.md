@@ -107,7 +107,3 @@ Antes de abrir un ticket:
 1. Reproduce el caso una vez mas en un entorno controlado
 2. Confirma si el problema es de Discord, base de datos o permisos
 3. Intenta exportar auditoria o revisar logs del jugador
-
-## Cierre comercial breve
-
-InvRollback aporta algo que muchos plugins de rollback no ofrecen juntos: evidencia, aprobacion remota, restauracion parcial, cola para jugadores offline y auditoria utilizable. Si tu proyecto vende seriedad y soporte de calidad, esta documentacion debe reforzar exactamente esa promesa.
