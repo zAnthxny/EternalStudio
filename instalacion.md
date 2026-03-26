@@ -56,14 +56,6 @@ Esta pagina cubre la instalacion desde cero, la primera ejecucion del plugin y l
 7. Vuelve a iniciar el servidor.
 8. Verifica que no aparezcan errores de base de datos ni de Discord en consola.
 
-### Opcion B: compilar desde este repositorio
-
-Comando de build:
-
-```powershell
-.\mvnw.cmd -DskipTests package
-```
-
 Artefactos observados en este proyecto:
 
 | Archivo | Uso esperado |
