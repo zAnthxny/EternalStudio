@@ -182,8 +182,8 @@ Notas tecnicas:
 
 El plugin elimina automaticamente:
 
-- snapshots mas viejos que el limite de dias
-- snapshots que excedan el maximo por jugador
+- Snapshots mas viejos que el limite de dias
+- Snapshots que excedan el maximo por jugador
 
 ### Filtros de guardado
 
@@ -257,15 +257,15 @@ storage:
 
 Ventajas:
 
-- sencilla
-- local
-- sin servicios extra
+- Sencilla
+- Local
+- Sin servicios extra
 
 Uso recomendado:
 
-- servidores de una sola instancia
-- staging
-- proyectos pequenos o medianos
+- Servidores de una sola instancia
+- Staging
+- Proyectos pequenos o medianos
 
 Ejemplo:
 
@@ -281,9 +281,9 @@ database:
 
 Ventajas:
 
-- mejor para volumen alto
-- mas facil de respaldar y monitorear externamente
-- mejor opcion para redes o infraestructura profesional
+- Mejor para volumen alto
+- Mas facil de respaldar y monitorear externamente
+- Mejor opcion para redes o infraestructura profesional
 
 Ejemplo:
 
@@ -317,30 +317,30 @@ Con el prefijo por defecto, el plugin crea:
 
 ### Datos importantes en `snapshots`
 
-- jugador y UUID
+- Jugador y UUID
 - `death_id`
-- fecha y timestamp
-- categoria `DEATH` o `BACKUP`
-- motivo y mensaje
-- ubicacion y servidor
-- inventario, armadura, offhand, Ender Chest y XP serializados
-- estado `OPEN`, `PENDING`, `QUEUED`, `RESTORED`, `DENIED`
-- informacion de solicitud y mensaje de Discord
-- ultimo actor, ultima nota y tipo de restore
-- estadisticas de items: totales, encantados, totems, netherite, shulkers
+- Fecha y timestamp
+- Categoria `DEATH` o `BACKUP`
+- Motivo y mensaje
+- Ubicacion y servidor
+- Inventario, armadura, offhand, Ender Chest y XP serializados
+- Estado `OPEN`, `PENDING`, `QUEUED`, `RESTORED`, `DENIED`
+- Informacion de solicitud y mensaje de Discord
+- Ultimo actor, ultima nota y tipo de restore
+- Estadisticas de items: totales, encantados, totems, netherite, shulkers
 
 ### Datos importantes en `audit_log`
 
 - ID de entrada
-- accion
-- actor
-- jugador afectado
+- Accion
+- Actor
+- Jugador afectado
 - `death_id`
-- fecha del snapshot
-- estado
-- nota
-- ubicacion
-- servidor
+- Fecha del snapshot
+- Estado
+- Nota
+- Ubicacion
+- Servidor
 
 ## Mensajes y personalizacion
 
@@ -371,9 +371,9 @@ La implementacion actual usa `ChatColor.translateAlternateColorCodes('&', ...)`.
 
 Eso significa:
 
-- soporte nativo para colores legacy con `&`
-- sin parser MiniMessage
-- sin soporte HEX dedicado en el codigo actual
+- Soporte nativo para colores legacy con `&`
+- Sin parser MiniMessage
+- Sin soporte HEX dedicado en el codigo actual
 
 Ejemplo valido:
 
@@ -444,16 +444,16 @@ Desde ahi:
 
 El plugin captura:
 
-- inventario principal
-- armadura
-- mano secundaria
+- Inventario principal
+- Armadura
+- Mano secundaria
 - Ender Chest
-- experiencia
-- fecha y timestamp
-- ubicacion
-- servidor
-- razon visible de la muerte
-- resumen de items relevantes
+- Experiencia
+- Fecha y timestamp
+- Ubicacion
+- Servidor
+- Razon visible de la muerte
+- Resumen de items relevantes
 
 Si no hay items ni contenido util que guardar, el snapshot no se persiste.
 
@@ -468,10 +468,10 @@ Si no hay items ni contenido util que guardar, el snapshot no se persiste.
 
 Si el jugador esta offline cuando un moderador aprueba una solicitud en Discord:
 
-- el snapshot pasa a `QUEUED`
-- se registra en auditoria
-- el mensaje de Discord se actualiza
-- el plugin intenta aplicarlo en el siguiente `PlayerJoinEvent`
+- El snapshot pasa a `QUEUED`
+- Se registra en auditoria
+- El mensaje de Discord se actualiza
+- El plugin intenta aplicarlo en el siguiente `PlayerJoinEvent`
 
 ### GUI interna
 
@@ -479,14 +479,14 @@ La GUI principal muestra hasta `45` snapshots por pagina y deja la fila inferior
 
 La GUI de inspeccion incluye:
 
-- vista del inventario perdido
-- armadura separada
-- offhand
-- datos del caso
-- historial rapido
-- teleport al lugar
-- mostrar ID
-- solicitar rollback
+- Vista del inventario perdido
+- Armadura separada
+- Offhand
+- Datos del caso
+- Historial rapido
+- Teleport al lugar
+- Mostrar ID
+- Solicitar rollback
 
 ## Estructura de archivos en produccion
 
@@ -504,10 +504,10 @@ La GUI de inspeccion incluye:
 
 Por la implementacion actual, el plugin ya incluye varias decisiones saludables:
 
-- escritura asincrona de snapshots con un ejecutor dedicado
-- pool HikariCP para base de datos
-- indices SQL para consultas habituales
-- retencion automatica para evitar crecimiento indefinido
+- Escritura asincrona de snapshots con un ejecutor dedicado
+- Pool HikariCP para base de datos
+- Indices SQL para consultas habituales
+- Retencion automatica para evitar crecimiento indefinido
 
 ### Recomendaciones practicas
 
