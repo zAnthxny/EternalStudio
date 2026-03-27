@@ -1,4 +1,6 @@
-<img src="./image.png" alt="Logo" width="220">
+<p align="center">
+  <img src="./image.png" alt="Logo EternalStudio" width="220">
+</p>
 
 # InvRollback
 
