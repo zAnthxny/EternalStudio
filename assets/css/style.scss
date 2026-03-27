@@ -3,15 +3,35 @@
 
 @import "{{ site.theme }}";
 
-#header {
-  display: none !important;
+html,
+body {
+  background: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
 }
 
-#title {
+#header,
+#title,
+.credits {
   display: none !important;
 }
 
 section {
-  margin-top: 20px !important;
-  padding-top: 20px !important;
+  background: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wrapper {
+  background: #000000 !important;
+}
+
+a {
+  color: #58a6ff !important;
+}
+
+hr {
+  border-color: #222222 !important;
 }
