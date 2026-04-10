@@ -2,15 +2,15 @@
   <img src="./image.png" alt="Logo EternalStudio" width="600">
 </p>
 
-# InvRollback
+# NovaRestore
 
-InvRollback+ es un plugin de administracion para servidores de Minecraft orientado al registro de muertes, inspeccion de inventarios perdidos y gestion de restauraciones con flujo de aprobacion en Discord con almacenamiento en base de datos `SQLite` o `MySQL`.
+NovaRestore es un plugin de administracion para servidores de Minecraft orientado al registro de muertes, inspeccion de inventarios perdidos y gestion de restauraciones con flujo de aprobacion en Discord con almacenamiento en base de datos `SQLite` o `MySQL`.
 
 ## Resumen rapido
 
 | Dato | Valor |
 | --- | --- |
-| Plugin | `InvRollback` |
+| Plugin | `NovaRestore` |
 | Version documentada | `1.1.0` |
 | Autor | `zAnthxny_` |
 | Categoria | Administracion, rollback de inventario, auditoria |
@@ -36,9 +36,9 @@ Esta documentacion se compacto en seis paginas para que sea facil de mantener y 
 | [permisos](permisos.md) | Permisos completos, perfiles sugeridos y ejemplos con LuckPerms |
 | [FAQ](faq.md) | Solucion de problemas, FAQ, soporte, licencia y plantilla de changelog |
 
-## Que hace InvRollback
+## Que hace NovaRestore
 
-InvRollback resuelve un problema muy concreto en servidores serios: recuperar inventarios perdidos sin convertir el proceso en algo improvisado, opaco o inseguro.
+NovaRestore resuelve un problema muy concreto en servidores serios: recuperar inventarios perdidos sin convertir el proceso en algo improvisado, opaco o inseguro.
 
 En lugar de depender de restauraciones manuales, evidencia incompleta o decisiones tomadas en caliente, el plugin registra cada muerte con informacion util para soporte:
 
@@ -172,7 +172,7 @@ Ademas, la auditoria puede exportarse desde comando.
 
 ## Para que tipo de servidor sirve
 
-InvRollback encaja especialmente bien en:
+NovaRestore encaja especialmente bien en:
 
 - Survival con economia y staff activo
 - Servidores PvP o factions con disputas frecuentes
@@ -182,7 +182,7 @@ InvRollback encaja especialmente bien en:
 
 ## Casos de uso rapidos
 
-| Escenario | Como ayuda InvRollback |
+| Escenario | Como ayuda NovaRestore |
 | --- | --- |
 | Muerte por lag en survival | El staff revisa la perdida, solicita rollback y lo aprueba con evidencia |
 | Jugador desconectado tras un PvP | Se guarda snapshot de seguridad por combate reciente |
@@ -206,4 +206,4 @@ InvRollback encaja especialmente bien en:
 
 ## NOTA:
 
-> InvRollback profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores.
+> NovaRestore profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores.
