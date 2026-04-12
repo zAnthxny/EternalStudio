@@ -96,11 +96,7 @@ To get a high-quality answer faster, the user should send:
 
 ### Channels
 
-- Support Discord: `[TO BE FILLED]`
-- Website: `[TO BE FILLED]`
-- Email or form: `[TO BE FILLED]`
-- Bug report: `[TO BE FILLED]`
-- Feature suggestions: `[TO BE FILLED]`
+- Support Discord: [NovaStudios](https://discord.gg/zeSHUQXPuz)
 
 ### Operational recommendation
 
