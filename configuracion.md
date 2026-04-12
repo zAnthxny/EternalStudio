@@ -6,9 +6,9 @@ Esta pagina documenta los archivos configurables, el sistema interno del plugin,
 
 | Archivo | Tipo | Descripcion |
 | --- | --- | --- |
-| `plugins/InvRollback/config.yml` | Obligatorio | Configuracion principal del plugin |
-| `plugins/InvRollback/lang/es.yml` | Editable | Mensajes en espanol |
-| `plugins/InvRollback/lang/en.yml` | Editable | Mensajes en ingles |
+| `plugins/NovaRestore/config.yml` | Obligatorio | Configuracion principal del plugin |
+| `plugins/NovaRestore/lang/es.yml` | Editable | Mensajes en espanol |
+| `plugins/NovaRestore/lang/en.yml` | Editable | Mensajes en ingles |
 
 ## `config.yml` por defecto
 
@@ -47,7 +47,7 @@ discord:
     - "123456789012345678"
   thumbnail-url-template: "https://mc-heads.net/avatar/%uuid%/128"
   audit-webhook-url: ""
-  audit-webhook-username: "InvRollback Audit"
+  audit-webhook-username: "NovaRestore Audit"
   audit-webhook-avatar-url: ""
 
 notifications:
@@ -126,13 +126,19 @@ Notas tecnicas:
 
 | Ruta | Default | Descripcion |
 | --- | --- | --- |
-| `discord.bot-token` | `TOKEN_EN_STARTUP_ARGUMENTS` | Token del bot. El proyecto recomienda usar `-Ddiscord.token=TU_TOKEN` al iniciar el servidor |
+| `discord.bot-token` | `TOKEN_EN_STARTUP_ARGUMENTS` | Marcador o documentacion. No pongas aqui el token real; usa `-Ddiscord.token=TU_TOKEN` en el arranque del servidor |
 | `discord.log-channel-id` | `123456789012345678` | Canal donde se enviaran solicitudes de rollback |
 | `discord.admin-role-ids` | lista | IDs de roles autorizados para aprobar o rechazar |
 | `discord.thumbnail-url-template` | `https://mc-heads.net/avatar/%uuid%/128` | URL de miniatura por jugador |
 | `discord.audit-webhook-url` | vacio | Webhook opcional para duplicar auditoria |
-| `discord.audit-webhook-username` | `InvRollback Audit` | Nombre del webhook |
+| `discord.audit-webhook-username` | `NovaRestore Audit` | Nombre del webhook |
 | `discord.audit-webhook-avatar-url` | vacio | Avatar del webhook |
+
+Regla de seguridad para produccion:
+
+- no guardes el token real del bot en `config.yml`
+- define el token en el arranque del servidor con `-Ddiscord.token=TU_TOKEN`
+- revisa [instalacion.md](instalacion.md) para ejemplos de `start.sh`, `start.bat` y despliegue en hosting
 
 Opciones soportadas por codigo aunque no aparezcan en el archivo por defecto:
 
@@ -182,8 +188,8 @@ Notas tecnicas:
 
 El plugin elimina automaticamente:
 
-- Snapshots mas viejos que el limite de dias
-- Snapshots que excedan el maximo por jugador
+- snapshots mas viejos que el limite de dias
+- snapshots que excedan el maximo por jugador
 
 ### Filtros de guardado
 
@@ -257,15 +263,15 @@ storage:
 
 Ventajas:
 
-- Sencilla
-- Local
-- Sin servicios extra
+- sencilla
+- local
+- sin servicios extra
 
 Uso recomendado:
 
-- Servidores de una sola instancia
-- Staging
-- Proyectos pequenos o medianos
+- servidores de una sola instancia
+- staging
+- proyectos pequenos o medianos
 
 Ejemplo:
 
@@ -281,9 +287,9 @@ database:
 
 Ventajas:
 
-- Mejor para volumen alto
-- Mas facil de respaldar y monitorear externamente
-- Mejor opcion para redes o infraestructura profesional
+- mejor para volumen alto
+- mas facil de respaldar y monitorear externamente
+- mejor opcion para redes o infraestructura profesional
 
 Ejemplo:
 
@@ -317,30 +323,30 @@ Con el prefijo por defecto, el plugin crea:
 
 ### Datos importantes en `snapshots`
 
-- Jugador y UUID
+- jugador y UUID
 - `death_id`
-- Fecha y timestamp
-- Categoria `DEATH` o `BACKUP`
-- Motivo y mensaje
-- Ubicacion y servidor
-- Inventario, armadura, offhand, Ender Chest y XP serializados
-- Estado `OPEN`, `PENDING`, `QUEUED`, `RESTORED`, `DENIED`
-- Informacion de solicitud y mensaje de Discord
-- Ultimo actor, ultima nota y tipo de restore
-- Estadisticas de items: totales, encantados, totems, netherite, shulkers
+- fecha y timestamp
+- categoria `DEATH` o `BACKUP`
+- motivo y mensaje
+- ubicacion y servidor
+- inventario, armadura, offhand, Ender Chest y XP serializados
+- estado `OPEN`, `PENDING`, `QUEUED`, `RESTORED`, `DENIED`
+- informacion de solicitud y mensaje de Discord
+- ultimo actor, ultima nota y tipo de restore
+- estadisticas de items: totales, encantados, totems, netherite, shulkers
 
 ### Datos importantes en `audit_log`
 
 - ID de entrada
-- Accion
-- Actor
-- Jugador afectado
+- accion
+- actor
+- jugador afectado
 - `death_id`
-- Fecha del snapshot
-- Estado
-- Nota
-- Ubicacion
-- Servidor
+- fecha del snapshot
+- estado
+- nota
+- ubicacion
+- servidor
 
 ## Mensajes y personalizacion
 
@@ -371,15 +377,15 @@ La implementacion actual usa `ChatColor.translateAlternateColorCodes('&', ...)`.
 
 Eso significa:
 
-- Soporte nativo para colores legacy con `&`
-- Sin parser MiniMessage
-- Sin soporte HEX dedicado en el codigo actual
+- soporte nativo para colores legacy con `&`
+- sin parser MiniMessage
+- sin soporte HEX dedicado en el codigo actual
 
 Ejemplo valido:
 
 ```yml
 general:
-  prefix: "&6[InvRollback] &f"
+  prefix: "&6[NovaRestore] &f"
 ```
 
 ### Personalizacion recomendada
@@ -444,16 +450,16 @@ Desde ahi:
 
 El plugin captura:
 
-- Inventario principal
-- Armadura
-- Mano secundaria
+- inventario principal
+- armadura
+- mano secundaria
 - Ender Chest
-- Experiencia
-- Fecha y timestamp
-- Ubicacion
-- Servidor
-- Razon visible de la muerte
-- Resumen de items relevantes
+- experiencia
+- fecha y timestamp
+- ubicacion
+- servidor
+- razon visible de la muerte
+- resumen de items relevantes
 
 Si no hay items ni contenido util que guardar, el snapshot no se persiste.
 
@@ -468,10 +474,10 @@ Si no hay items ni contenido util que guardar, el snapshot no se persiste.
 
 Si el jugador esta offline cuando un moderador aprueba una solicitud en Discord:
 
-- El snapshot pasa a `QUEUED`
-- Se registra en auditoria
-- El mensaje de Discord se actualiza
-- El plugin intenta aplicarlo en el siguiente `PlayerJoinEvent`
+- el snapshot pasa a `QUEUED`
+- se registra en auditoria
+- el mensaje de Discord se actualiza
+- el plugin intenta aplicarlo en el siguiente `PlayerJoinEvent`
 
 ### GUI interna
 
@@ -479,24 +485,24 @@ La GUI principal muestra hasta `45` snapshots por pagina y deja la fila inferior
 
 La GUI de inspeccion incluye:
 
-- Vista del inventario perdido
-- Armadura separada
-- Offhand
-- Datos del caso
-- Historial rapido
-- Teleport al lugar
-- Mostrar ID
-- Solicitar rollback
+- vista del inventario perdido
+- armadura separada
+- offhand
+- datos del caso
+- historial rapido
+- teleport al lugar
+- mostrar ID
+- solicitar rollback
 
 ## Estructura de archivos en produccion
 
 | Ruta | Descripcion | Conviene respaldar |
 | --- | --- | --- |
-| `plugins/InvRollback/config.yml` | Configuracion principal | Si |
-| `plugins/InvRollback/lang/es.yml` | Traduccion/personalizacion | Si |
-| `plugins/InvRollback/lang/en.yml` | Traduccion alternativa | Si |
-| `plugins/InvRollback/database/invrestore.db` | Base SQLite | Si, si usas SQLite |
-| `plugins/InvRollback/exports/` | Exportaciones manuales | Recomendado |
+| `plugins/NovaRestore/config.yml` | Configuracion principal | Si |
+| `plugins/NovaRestore/lang/es.yml` | Traduccion/personalizacion | Si |
+| `plugins/NovaRestore/lang/en.yml` | Traduccion alternativa | Si |
+| `plugins/NovaRestore/database/invrestore.db` | Base SQLite | Si, si usas SQLite |
+| `plugins/NovaRestore/exports/` | Exportaciones manuales | Recomendado |
 
 ## Rendimiento y optimizacion
 
@@ -504,10 +510,10 @@ La GUI de inspeccion incluye:
 
 Por la implementacion actual, el plugin ya incluye varias decisiones saludables:
 
-- Escritura asincrona de snapshots con un ejecutor dedicado
-- Pool HikariCP para base de datos
-- Indices SQL para consultas habituales
-- Retencion automatica para evitar crecimiento indefinido
+- escritura asincrona de snapshots con un ejecutor dedicado
+- pool HikariCP para base de datos
+- indices SQL para consultas habituales
+- retencion automatica para evitar crecimiento indefinido
 
 ### Recomendaciones practicas
 
@@ -531,4 +537,5 @@ Por la implementacion actual, el plugin ya incluye varias decisiones saludables:
 - Documentar internamente quien puede aprobar en Discord y quien solo puede solicitar.
 - Ajustar `quick-reasons` al lenguaje real del staff.
 
-La referencia operativa de comandos esta en [Comandos](comandos.md).
+La referencia operativa de comandos esta en [comandos.md](comandos.md).
+
