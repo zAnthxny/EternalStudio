@@ -207,5 +207,6 @@ NovaRestore encaja especialmente bien en:
 
 ## NOTA
 
-> NovaRestore profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores. 
+> NovaRestore profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores.
+
 -# Se recomienda usarlo primero en un servidor de prueba (TestServer) para configuración del plugin.
