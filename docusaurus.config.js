@@ -56,11 +56,6 @@ const config = {
           position: 'left',
           label: 'Documentación',
         },
-        {
-          href: 'https://github.com/zanthxny/NovaStudios',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
@@ -71,15 +66,6 @@ const config = {
           items: [
             { label: 'Introducción', to: '/' },
             { label: 'Instalación', to: '/instalacion' },
-          ],
-        },
-        {
-          title: 'Comunidad',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/zanthxny/NovaStudios',
-            },
           ],
         },
       ],
