@@ -22,7 +22,7 @@ NovaRestore es un plugin profesional para Paper que guarda snapshots de muerte, 
 | Dependencias externas de plugins | Ninguna |
 | Integracion principal | Discord mediante bot JDA |
 | Idiomas incluidos | `es`, `en` |
-| Discord de soporte | [NovaStudios](https://discord.gg/zeSHUQXPuz) |
+| Discord de soporte | [NovaStudios](https://discord.gg/k67f2k6hkR) |
 
 ## Mapa de la wiki
 
@@ -203,7 +203,7 @@ NovaRestore encaja especialmente bien en:
 
 ### Soporte
 
-- Discord: [NovaStudios](https://discord.gg/zeSHUQXPuz)
+- Discord: [NovaStudios](https://discord.gg/k67f2k6hkR)
 
 ## NOTA
 
