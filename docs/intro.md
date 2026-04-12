@@ -22,7 +22,7 @@ NovaRestore es un plugin profesional para Paper que guarda snapshots de muerte, 
 | Dependencias externas de plugins | Ninguna |
 | Integracion principal | Discord mediante bot JDA |
 | Idiomas incluidos | `es`, `en` |
-| Discord de soporte | `[POR COMPLETAR]` |
+| Discord de soporte | [NovaStudios](https://discord.gg/zeSHUQXPuz) |
 
 ## Mapa de la wiki
 
@@ -31,11 +31,11 @@ Esta documentacion se compacto en seis paginas para que sea facil de mantener y 
 | Pagina | Contenido |
 | --- | --- |
 | [Introducción](/) | Presentacion general, beneficios, compatibilidad, mapa de navegacion y enfoque comercial |
-| [instalacion.md](instalacion.md) | Requisitos, despliegue, primera ejecucion, archivos generados y errores comunes de arranque |
-| [configuracion.md](configuracion.md) | `config.yml`, idiomas, integraciones, placeholders, base de datos, sistema interno y optimizacion |
-| [comandos.md](comandos.md) | Comandos, GUI, filtros, ejemplos practicos y flujo operativo |
-| [permisos.md](permisos.md) | Permisos completos, perfiles sugeridos y ejemplos con LuckPerms |
-| [faq.md](faq.md) | Solucion de problemas, FAQ, soporte, licencia y plantilla de changelog |
+| [Instalacion](instalacion.md) | Requisitos, despliegue, primera ejecucion, archivos generados y errores comunes de arranque |
+| [Configuracion](configuracion.md) | `config.yml`, idiomas, integraciones, placeholders, base de datos, sistema interno y optimizacion |
+| [Comandos](comandos.md) | Comandos, GUI, filtros, ejemplos practicos y flujo operativo |
+| [Permisos](permisos.md) | Permisos completos, perfiles sugeridos y ejemplos con LuckPerms |
+| [FAQ](faq.md) | Solucion de problemas, FAQ, soporte, licencia y plantilla de changelog |
 
 ## Que hace NovaRestore
 
