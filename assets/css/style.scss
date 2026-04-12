@@ -184,8 +184,10 @@ hr {
 ========================= */
 table {
   width: 100% !important;
+  max-width: 100% !important;
   border-collapse: separate !important;
   border-spacing: 0 !important;
+  table-layout: fixed !important;
   overflow: hidden;
   border-radius: 16px !important;
   background: rgba(255, 255, 255, 0.02) !important;
@@ -203,6 +205,27 @@ th,
 td {
   padding: 14px 16px !important;
   border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  max-width: 0 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  vertical-align: top !important;
+}
+
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 32% !important;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 28% !important;
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 40% !important;
 }
 
 tbody tr:nth-child(even) {
@@ -219,6 +242,18 @@ th strong {
   color: #ffffff !important;
 }
 
+td code,
+th code,
+td pre,
+th pre {
+  display: inline-block !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
 /* =========================
    Código / badges
 ========================= */
@@ -231,7 +266,12 @@ pre {
 }
 
 code {
+  display: inline-block !important;
+  max-width: 100% !important;
   padding: 2px 8px !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
 }
 
 /* =========================
@@ -263,5 +303,14 @@ img {
   th,
   td {
     padding: 12px 12px !important;
+  }
+
+  table th:nth-child(1),
+  table td:nth-child(1),
+  table th:nth-child(2),
+  table td:nth-child(2),
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    width: auto !important;
   }
 }
