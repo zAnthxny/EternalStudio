@@ -15,7 +15,7 @@ NovaRestore centraliza casi toda su operacion en el comando base `invrollback`, 
 | `/invrollback stats &lt;jugador&gt;` | Alias funcional de `info` | `/invrollback stats Steve` | `rollback.info` | `/invrestore stats` | Si |
 | `/invrollback history &lt;jugador&gt; [filtro] [busqueda]` | Muestra historial resumido de muertes | `/invrollback history Steve restored` | `rollback.info` | `/invrestore history` | Si |
 | `/invrollback logs &lt;jugador&gt;` | Muestra auditoria reciente del jugador | `/invrollback logs Steve` | `rollback.logs` | `/invrestore logs` | Si |
-| `/invrollback export &lt;yml|json&gt;` | [jugador]` | Exporta auditoria global o de un jugador | `/invrollback export json Steve` | `rollback.export` | `/invrestore export` | Si |
+| `/invrollback export &lt;yml|json&gt;` | [jugador] | Exporta auditoria global o de un jugador | `/invrollback export json Steve` | `rollback.export` | `/invrestore export` | Si |
 
 ## Filtros disponibles
 
