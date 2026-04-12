@@ -287,4 +287,4 @@ Solution:
 - Export the audit once to confirm write permissions.
 - Back up `config.yml`, `lang/`, and the database before major changes.
 
-The full configuration reference is in [Configuracion](configuracion.md).
+The full configuration reference is in [Configuration](configuracion.md).
