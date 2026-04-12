@@ -2,7 +2,7 @@ const { themes: prismThemes } = require('prism-react-renderer');
 
 const config = {
   title: 'NovaRestore Wiki',
-  tagline: 'Documentación oficial de NovaRestore',
+  tagline: 'Official NovaRestore documentation',
   favicon: 'img/logo.png',
 
   url: 'https://zanthxny.github.io',
@@ -22,7 +22,17 @@ const config = {
 
   i18n: {
     defaultLocale: 'es',
-    locales: ['es'],
+    locales: ['es', 'en'],
+    localeConfigs: {
+      es: {
+        label: 'ES',
+        htmlLang: 'es',
+      },
+      en: {
+        label: 'EN',
+        htmlLang: 'en',
+      },
+    },
   },
 
   presets: [
@@ -55,6 +65,10 @@ const config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentación',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
     },
