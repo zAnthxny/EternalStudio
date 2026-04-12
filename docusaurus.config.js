@@ -44,9 +44,9 @@ const config = {
   themeConfig: {
     image: 'img/logo.png',
     navbar: {
-      title: 'NovaRestore',
+      title: '',
       logo: {
-        alt: 'NovaRestore Logo',
+        alt: '',
         src: 'img/logo.png',
       },
       items: [
