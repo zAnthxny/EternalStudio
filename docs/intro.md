@@ -1,7 +1,7 @@
 ---
 slug: /
+title: Introducción
 ---
-
 
 # NovaRestore
 
@@ -30,7 +30,7 @@ Esta documentacion se compacto en seis paginas para que sea facil de mantener y 
 
 | Pagina | Contenido |
 | --- | --- |
-| [index.md](index.md) | Presentacion general, beneficios, compatibilidad, mapa de navegacion y enfoque comercial |
+| [Introducción](/) | Presentacion general, beneficios, compatibilidad, mapa de navegacion y enfoque comercial |
 | [instalacion.md](instalacion.md) | Requisitos, despliegue, primera ejecucion, archivos generados y errores comunes de arranque |
 | [configuracion.md](configuracion.md) | `config.yml`, idiomas, integraciones, placeholders, base de datos, sistema interno y optimizacion |
 | [comandos.md](comandos.md) | Comandos, GUI, filtros, ejemplos practicos y flujo operativo |
@@ -209,4 +209,3 @@ NovaRestore encaja especialmente bien en:
 ## Texto comercial corto para marketplaces
 
 > NovaRestore profesionaliza el proceso de rollback de inventarios en Paper. Guarda cada muerte con contexto real, permite revisarla desde una GUI clara, envia solicitudes con aprobacion por Discord, soporta restauraciones completas, parciales o especificas por herramienta/pieza, y deja auditoria exportable para un staff serio. Ideal para servidores que quieren soporte premium, control operativo y confianza para sus jugadores.
-
