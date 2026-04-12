@@ -67,7 +67,7 @@ body::after {
   background: transparent !important;
   position: relative;
   z-index: 1;
-  width: min(1500px, calc(100vw - 48px)) !important;
+  width: min(1180px, calc(100vw - 56px)) !important;
   max-width: none !important;
   margin: 0 auto !important;
 }
@@ -77,8 +77,8 @@ section {
   z-index: 1;
   width: 100% !important;
   max-width: none !important;
-  margin: 40px auto !important;
-  padding: 38px 42px !important;
+  margin: 32px auto !important;
+  padding: 36px 40px !important;
   background: linear-gradient(180deg, rgba(12, 18, 32, 0.78), rgba(6, 10, 18, 0.88)) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
