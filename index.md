@@ -21,7 +21,7 @@ NovaRestore es un plugin de administracion para servidores de Minecraft orientad
 | Dependencias externas de plugins | Ninguna |
 | Integracion principal | Discord mediante bot JDA |
 | Idiomas incluidos | `es`, `en` |
-| Discord de soporte | [EternalStudio](https://discord.gg/EdYjfEyWaw) |
+| Discord de soporte | [NovaStudios](https://discord.gg/6xkh64Mzn5) |
 
 ## Mapa de la wiki
 
@@ -202,7 +202,7 @@ NovaRestore encaja especialmente bien en:
 
 ### Soporte
 
-- Discord de soporte [EternalStudio](https://discord.gg/EdYjfEyWaw) |
+- Discord de soporte [NovaStudios](https://discord.gg/6xkh64Mzn5) |
 
 ## NOTA:
 
