@@ -537,5 +537,5 @@ Por la implementacion actual, el plugin ya incluye varias decisiones saludables:
 - Documentar internamente quien puede aprobar en Discord y quien solo puede solicitar.
 - Ajustar `quick-reasons` al lenguaje real del staff.
 
-La referencia operativa de comandos esta en [comandos.md](comandos.md).
+La referencia operativa de comandos esta en [Comandos](comandos.md).
 
