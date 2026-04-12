@@ -287,5 +287,5 @@ Solucion:
 - Exporta auditoria una vez para confirmar permisos de escritura.
 - Respaldar `config.yml`, `lang/` y la base de datos antes de cambios grandes.
 
-La referencia completa de configuracion esta en [configuracion.md](configuracion.md).
+La referencia completa de configuracion esta en [Configuracion](configuracion.md).
 
