@@ -98,7 +98,7 @@ Para acelerar una respuesta de calidad, el usuario deberia enviar:
 
 ### Canales
 
-- Discord de soporte: `[POR COMPLETAR]`
+- Discord de soporte: [NovaStudios](https://discord.gg/zeSHUQXPuz)
 
 ### Recomendacion operativa
 
