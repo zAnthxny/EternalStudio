@@ -11,6 +11,7 @@ const config = {
 
   url: 'https://zanthxny.github.io',
   baseUrl: '/NovaStudios/',
+  trailingSlash: false,
 
   organizationName: 'zanthxny',
   projectName: 'NovaStudios',
