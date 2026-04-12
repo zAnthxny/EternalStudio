@@ -96,7 +96,7 @@ To get a high-quality answer faster, the user should send:
 
 ### Channels
 
-- Support Discord: [NovaStudios](https://discord.gg/zeSHUQXPuz)
+- Support Discord: [NovaStudios](https://discord.gg/k67f2k6hkR)
 
 ### Operational recommendation
 
