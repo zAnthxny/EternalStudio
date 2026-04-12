@@ -10,10 +10,10 @@ const config = {
   },
 
   url: 'https://zanthxny.github.io',
-  baseUrl: '/',
+  baseUrl: '/NovaStudios/',
 
   organizationName: 'zanthxny',
-  projectName: 'novarestore-wiki',
+  projectName: 'NovaStudios',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -55,7 +55,7 @@ const config = {
           label: 'Documentación',
         },
         {
-          href: 'https://github.com/zanthxny/novarestore-wiki',
+          href: 'https://github.com/zanthxny/NovaStudios',
           label: 'GitHub',
           position: 'right',
         },
@@ -82,7 +82,7 @@ const config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/zanthxny/novarestore-wiki',
+              href: 'https://github.com/zanthxny/NovaStudios',
             },
           ],
         },
