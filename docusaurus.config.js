@@ -1,13 +1,9 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+const { themes: prismThemes } = require('prism-react-renderer');
 
 const config = {
   title: 'NovaRestore Wiki',
   tagline: 'Documentación oficial de NovaRestore',
   favicon: 'img/logo.png',
-
-  future: {
-    v4: true,
-  },
 
   url: 'https://zanthxny.github.io',
   baseUrl: '/NovaStudios/',
@@ -17,11 +13,12 @@ const config = {
   projectName: 'NovaStudios',
 
   onBrokenLinks: 'throw',
+
   markdown: {
-  hooks: {
-    onBrokenMarkdownLinks: 'warn',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
-},
 
   i18n: {
     defaultLocale: 'es',
@@ -33,12 +30,12 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
@@ -72,14 +69,8 @@ const config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Introducción',
-              to: '/intro',
-            },
-            {
-              label: 'Instalación',
-              to: '/instalacion',
-            },
+            { label: 'Introducción', to: '/intro' },
+            { label: 'Instalación', to: '/instalacion' },
           ],
         },
         {
@@ -101,4 +92,4 @@ const config = {
   },
 };
 
-export default config;
+module.exports = config;
