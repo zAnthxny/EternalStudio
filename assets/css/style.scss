@@ -67,13 +67,17 @@ body::after {
   background: transparent !important;
   position: relative;
   z-index: 1;
+  width: min(1500px, calc(100vw - 48px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
 }
 
 section {
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  margin: 70px auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 40px auto !important;
   padding: 38px 42px !important;
   background: linear-gradient(180deg, rgba(12, 18, 32, 0.78), rgba(6, 10, 18, 0.88)) !important;
   color: #ffffff !important;
@@ -199,6 +203,7 @@ thead th {
   color: #ffffff !important;
   font-weight: 700 !important;
   letter-spacing: 0.3px;
+  white-space: nowrap !important;
 }
 
 th,
@@ -206,7 +211,7 @@ td {
   padding: 14px 16px !important;
   border-bottom: 1px solid rgba(255,255,255,0.07) !important;
   white-space: normal !important;
-  overflow-wrap: break-word !important;
+  overflow-wrap: normal !important;
   word-break: normal !important;
   vertical-align: top !important;
   line-height: 1.6 !important;
@@ -237,7 +242,7 @@ code {
   padding: 2px 8px !important;
   white-space: normal !important;
   overflow-wrap: break-word !important;
-  word-break: break-word !important;
+  word-break: normal !important;
 }
 
 pre {
@@ -247,9 +252,9 @@ pre {
   border-radius: 14px !important;
   padding: 16px 18px !important;
   white-space: pre-wrap !important;
-  overflow-wrap: anywhere !important;
-  word-break: break-word !important;
-  overflow-x: hidden !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
   line-height: 1.7 !important;
 }
 
@@ -265,7 +270,6 @@ pre code {
   color: inherit !important;
 }
 
-/* Evita que elementos internos rompan el layout */
 table code {
   display: inline !important;
   max-width: none !important;
@@ -290,8 +294,12 @@ img {
    Responsive
 ========================= */
 @media (max-width: 768px) {
+  .wrapper {
+    width: calc(100vw - 20px) !important;
+  }
+
   section {
-    margin: 24px 14px !important;
+    margin: 20px auto !important;
     padding: 24px 20px !important;
     border-radius: 18px !important;
   }
