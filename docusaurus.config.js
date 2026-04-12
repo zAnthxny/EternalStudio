@@ -69,7 +69,7 @@ const config = {
         {
           title: 'Docs',
           items: [
-            { label: 'Introducción', to: '/intro' },
+            { label: 'Introducción', to: '/' },
             { label: 'Instalación', to: '/instalacion' },
           ],
         },
