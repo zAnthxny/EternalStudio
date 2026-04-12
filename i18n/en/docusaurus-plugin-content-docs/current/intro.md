@@ -31,11 +31,11 @@ This documentation was condensed into six pages so it is easy to maintain and pu
 | Page | Content |
 | --- | --- |
 | [Introduction](/) | General presentation, benefits, compatibility, navigation map, and commercial positioning |
-| [instalacion.md](instalacion.md) | Requirements, deployment, first startup, generated files, and common startup issues |
-| [configuracion.md](configuracion.md) | `config.yml`, languages, integrations, placeholders, database, internal system, and optimization |
-| [comandos.md](comandos.md) | Commands, GUI, filters, practical examples, and operational flow |
-| [permisos.md](permisos.md) | Full permissions, suggested staff profiles, and LuckPerms examples |
-| [faq.md](faq.md) | Troubleshooting, FAQ, support, license, and changelog template |
+| [Instalation](instalacion.md) | Requirements, deployment, first startup, generated files, and common startup issues |
+| [Configuration](configuracion.md) | `config.yml`, languages, integrations, placeholders, database, internal system, and optimization |
+| [Commands](comandos.md) | Commands, GUI, filters, practical examples, and operational flow |
+| [Permissions](permisos.md) | Full permissions, suggested staff profiles, and LuckPerms examples |
+| [FAQ](faq.md) | Troubleshooting, FAQ, support, license, and changelog template |
 
 ## What NovaRestore does
 
@@ -43,15 +43,15 @@ NovaRestore solves a very specific problem for serious servers: recovering lost 
 
 Instead of relying on manual restorations, incomplete evidence, or rushed decisions, the plugin records every death with useful support data:
 
-- main inventory
-- armor
-- offhand
+- Main inventory
+- Armor
+- Offhand
 - Ender Chest
-- experience
-- server and location
-- exact date
-- visible death reason
-- statistical summary of valuable items
+- Experience
+- Server and location
+- Exact date
+- Visible death reason
+- Statistical summary of valuable items
 
 With that record, staff can inspect the loss, request approval through Discord, and apply a full, partial, or more precise restoration depending on the case.
 
@@ -78,13 +78,13 @@ If `protections.save-combat-logout-snapshots` is enabled, the plugin detects rec
 
 Staff can open a paginated GUI with status filters and search by:
 
-- death ID
-- date
-- world
-- coordinates
-- reason
-- status
-- category
+- Death ID
+- Date
+- World
+- Coordinates
+- Reason
+- Status
+- Category
 
 ### 4. Real inspection view
 
@@ -100,27 +100,27 @@ In addition to the general options, the embed includes the `Others` menu, design
 
 Depending on the snapshot, Discord can approve:
 
-- full restore
-- inventory only
-- armor only
-- offhand only
-- experience only
+- Full restore
+- Inventory only
+- Armor only
+- Offhand only
+- Experience only
 - Ender Chest only
-- one or several specific tools or armor pieces through `Others`
+- One or several specific tools or armor pieces through `Others`
 
 If a section does not exist in that snapshot, the option simply does not appear.
 
 Inside `Others`, staff can select one or several options in the same approval, for example:
 
-- sword
-- pickaxe
-- axe
-- shovel
-- helmet
-- chestplate
-- leggings
-- boots
-- offhand
+- Sword
+- Pickaxe
+- Axe
+- Shovel
+- Helmet
+- Chestplate
+- Leggings
+- Boots
+- Offhand
 
 That allows much more surgical returns, such as restoring only a sword and a pickaxe, or a chestplate together with the offhand, without restoring the entire inventory or full armor set.
 
@@ -142,15 +142,15 @@ The system includes several security layers:
 
 Every important action can be recorded:
 
-- request
-- queued approval
-- applied restore
-- automatic delivery
-- denial
-- cancellation
-- reopening
-- unlock
-- timeout expiration
+- Eequest
+- Queued approval
+- Applied restore
+- Automatic delivery
+- Denial
+- Cancellation
+- Reopening
+- Unlock
+- Timeout expiration
 
 The audit log can also be exported through command.
 
@@ -175,11 +175,11 @@ The audit log can also be exported through command.
 
 NovaRestore fits especially well in:
 
-- survival servers with economy and active staff
+- Survival servers with economy and active staff
 - PvP or factions servers with frequent disputes
-- game modes where deaths caused by bugs, lag, or admin mistakes must be reviewed with evidence
-- networks with multiple staff members that need traceability
-- premium projects that want serious support instead of improvised handling
+- Game modes where deaths caused by bugs, lag, or admin mistakes must be reviewed with evidence
+- Networks with multiple staff members that need traceability
+- Premium projects that want serious support instead of improvised handling
 
 ## Quick use cases
 
@@ -208,3 +208,5 @@ NovaRestore fits especially well in:
 ## Short marketplace text
 
 > NovaRestore professionalizes inventory rollback on Paper. It stores every death with real context, lets staff review it through a clear GUI, sends requests with Discord approval, supports full, partial, or item-specific restorations, and keeps exportable audit logs for serious staff teams. Ideal for servers that want premium support, operational control, and player trust.
+
+- It is recommended to use it first on a test server (TestServer) for plugin configuration.
