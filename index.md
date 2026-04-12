@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./image.png" alt="Logo EternalStudio" width="600">
+  <img src="./logo.png" alt="" width="600">
 </p>
 
 # NovaRestore
