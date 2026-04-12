@@ -2,7 +2,6 @@
   "name": "novarestore-wiki",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -14,7 +13,6 @@
   "dependencies": {
     "@docusaurus/core": "^3.10.0",
     "@docusaurus/preset-classic": "^3.10.0",
-    "@docusaurus/faster": "^3.10.0",
     "prism-react-renderer": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
