@@ -1,4 +1,4 @@
-const sidebars = {
+module.exports = {
   tutorialSidebar: [
     'intro',
     'instalacion',
@@ -8,5 +8,3 @@ const sidebars = {
     'faq',
   ],
 };
-
-export default sidebars;
