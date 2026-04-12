@@ -45,16 +45,102 @@ Esta pagina cubre la instalacion desde cero, la primera ejecucion del plugin y l
 ### Opcion A: instalacion normal en produccion
 
 1. Deten el servidor.
-2. Copia el `.jar` de `InvRollback` a la carpeta `plugins/`.
+2. Copia el `.jar` de `NovaRestore` a la carpeta `plugins/`.
 3. Inicia el servidor para que el plugin genere sus archivos.
 4. Deten el servidor nuevamente.
-5. Edita `plugins/InvRollback/config.yml`.
+5. Edita `plugins/NovaRestore/config.yml`.
 6. Si usaras Discord, configura:
    - `discord.log-channel-id`
    - `discord.admin-role-ids`
-   - `discord.bot-token` o, preferiblemente, el argumento `-Ddiscord.token=TU_TOKEN`
-7. Vuelve a iniciar el servidor.
-8. Verifica que no aparezcan errores de base de datos ni de Discord en consola.
+   - deja `discord.bot-token` como placeholder o documentacion, sin poner el token real
+7. Define el token real en el arranque del servidor usando `-Ddiscord.token=TU_TOKEN`
+8. Vuelve a iniciar el servidor.
+9. Verifica que no aparezcan errores de base de datos ni de Discord en consola.
+
+### Cargar el token del bot en el servidor
+
+NovaRestore esta pensado para produccion. El token real del bot no debe guardarse en `plugins/NovaRestore/config.yml`.
+
+Politica operativa recomendada:
+
+- `discord.bot-token` debe quedarse como placeholder o nota visual.
+- El token real debe cargarse en el arranque del servidor usando la propiedad JVM `discord.token`.
+- El argumento debe ir antes de `-jar`.
+- Solo el personal de infraestructura o despliegue debe tener acceso al script o panel donde se define ese arranque.
+
+Ejemplo en `Linux` con `start.sh`:
+
+```bash
+#!/bin/bash
+cd /opt/minecraft/survival
+java -Xms4G -Xmx4G "-Ddiscord.token=TU_TOKEN_REAL" -jar paper-1.21.11.jar nogui
+```
+
+Ejemplo en `Windows` con `start.bat`:
+
+```bat
+@echo off
+cd /d "C:\Minecraft\Survival"
+java -Xms4G -Xmx4G "-Ddiscord.token=TU_TOKEN_REAL" -jar "paper-1.21.11.jar" nogui
+pause
+```
+
+Si tu `.jar` de Paper tiene otro nombre, usa el nombre exacto del archivo. Por ejemplo:
+
+- `paper-1.21.11-123.jar`
+- `server.jar`
+- `paperclip.jar`
+
+Antes de editar el script, confirma el nombre real del archivo del servidor:
+
+En `Linux`:
+
+```bash
+ls *.jar
+```
+
+En `Windows PowerShell`:
+
+```powershell
+Get-ChildItem *.jar
+```
+
+Si usas un panel de hosting, la regla es la misma:
+
+- agrega `-Ddiscord.token=TU_TOKEN_REAL` al comando de arranque del servidor
+- colocalo antes de `-jar`
+- no pegues el token en `config.yml`
+
+Comportamiento esperado de NovaRestore:
+
+- si `discord.token` es valido, el bot intentara conectarse al arrancar
+- si falta o es invalido, el plugin cargara en modo degradado y avisara claramente en consola
+- si detecta un token real en `config.yml`, mostrara un warning de seguridad y no lo usara como fallback
+
+Checklist rapido para produccion:
+
+- el bot ya esta invitado al servidor de Discord correcto
+- `discord.log-channel-id` apunta al canal correcto
+- `discord.admin-role-ids` contiene los roles correctos
+- el token se define en el script o panel de arranque del servidor
+- `discord.bot-token` no contiene el secreto real
+
+### Opcion B: compilar desde este repositorio
+
+Comando de build:
+
+```powershell
+.\mvnw.cmd -DskipTests package
+```
+
+Artefactos observados en este proyecto:
+
+| Archivo | Uso esperado |
+| --- | --- |
+| `target/NovaRestore-dev-1.1.0.jar` | Build de desarrollo |
+| `target/NovaRestore.jar` | Salida final de release/ofuscacion en este proyecto |
+
+Si vas a distribuir una build comercial, confirma el nombre final del artefacto publico antes de publicar la wiki en marketplaces.
 
 ## Primera ejecucion
 
@@ -76,7 +162,7 @@ Ubicacion esperada en un servidor:
 
 ```text
 plugins/
-  InvRollback/
+  NovaRestore/
     config.yml
     lang/
       es.yml
@@ -164,7 +250,7 @@ Solucion:
 
 1. revisa `database.type`
 2. valida host, puerto, base, usuario y password
-3. confirma que el servidor puede escribir en `plugins/InvRollback/`
+3. confirma que el servidor puede escribir en `plugins/NovaRestore/`
 
 ## El plugin no genera snapshots
 
@@ -194,4 +280,12 @@ Solucion:
 2. abre la GUI y confirma el estado del snapshot
 3. revisa los mensajes del plugin en consola
 
-La referencia completa de configuracion esta en [Configuracion](configuracion.md).
+## Recomendaciones antes de pasar a produccion
+
+- Haz una prueba completa de muerte, solicitud, aprobacion y restauracion.
+- Valida tambien el caso de aprobacion con jugador offline.
+- Exporta auditoria una vez para confirmar permisos de escritura.
+- Respaldar `config.yml`, `lang/` y la base de datos antes de cambios grandes.
+
+La referencia completa de configuracion esta en [configuracion.md](configuracion.md).
+
