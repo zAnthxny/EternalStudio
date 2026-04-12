@@ -10,7 +10,7 @@ Esta pagina documenta los archivos configurables, el sistema interno del plugin,
 | `plugins/NovaRestore/lang/es.yml` | Editable | Mensajes en espanol |
 | `plugins/NovaRestore/lang/en.yml` | Editable | Mensajes en ingles |
 
-## `config.yml` por defecto
+## `config.yml por defecto`
 
 ```yml
 lang: "es"
@@ -81,7 +81,7 @@ storage:
     blocked-gamemodes: []
 ```
 
-## Explicacion completa de `config.yml`
+## `Explicacion completa de config.yml`
 
 ### Idioma general
 
