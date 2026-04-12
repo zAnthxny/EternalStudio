@@ -123,23 +123,23 @@ h4,
 h5,
 h6 {
   color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #ffffff !important;
   letter-spacing: 0.2px;
+  text-shadow: 0 0 18px rgba(76, 201, 255, 0.08);
 }
 
 h1 {
   font-size: 2.5rem !important;
   line-height: 1.1 !important;
   margin-bottom: 18px !important;
-  background: linear-gradient(90deg, #ffffff 0%, #c9d8ff 42%, #4cc9ff 78%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-size: 1.8rem !important;
   margin-top: 34px !important;
   margin-bottom: 18px !important;
-  color: #ffffff !important;
   position: relative;
   padding-left: 14px;
 }
