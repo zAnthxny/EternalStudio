@@ -1,1 +1,325 @@
+---
+---
 
+@import "{{ site.theme }}";
+
+/* =========================
+   Base
+========================= */
+html,
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 50% 14%, rgba(76, 201, 255, 0.16) 0%, rgba(76, 201, 255, 0.06) 18%, transparent 38%),
+    radial-gradient(circle at 18% 78%, rgba(139, 92, 246, 0.12) 0%, transparent 32%),
+    radial-gradient(circle at 82% 24%, rgba(88, 166, 255, 0.10) 0%, transparent 28%),
+    linear-gradient(180deg, #070b14 0%, #04060b 55%, #020304 100%) !important;
+  background-attachment: fixed !important;
+  color: #ffffff !important;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Decoración de fondo sutil */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,0.9), transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,0.9), transparent 85%);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(76, 201, 255, 0.18) 0%, rgba(139, 92, 246, 0.10) 38%, transparent 72%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* =========================
+   Ocultar elementos innecesarios
+========================= */
+#header,
+#title,
+.credits {
+  display: none !important;
+}
+
+/* =========================
+   Estructura
+========================= */
+.wrapper {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+  width: min(1500px, calc(100vw - 48px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 40px auto !important;
+  padding: 38px 42px !important;
+  background: linear-gradient(180deg, rgba(12, 18, 32, 0.78), rgba(6, 10, 18, 0.88)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 22px !important;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(76, 201, 255, 0.04),
+    0 0 40px rgba(76, 201, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Línea decorativa superior */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, #4cc9ff, transparent);
+  opacity: 0.9;
+}
+
+/* =========================
+   Tipografía
+========================= */
+body,
+p,
+li,
+td,
+th {
+  color: #d6deea !important;
+}
+
+p,
+li {
+  line-height: 1.75 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #ffffff !important;
+  letter-spacing: 0.2px;
+  text-shadow: 0 0 18px rgba(76, 201, 255, 0.08);
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 18px !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  margin-top: 34px !important;
+  margin-bottom: 18px !important;
+  position: relative;
+  padding-left: 14px;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #8b5cf6, #4cc9ff);
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  color: #73c7ff !important;
+  text-decoration: none !important;
+  transition: 0.25s ease;
+}
+
+a:hover {
+  color: #b993ff !important;
+  text-shadow: 0 0 10px rgba(115, 199, 255, 0.35);
+}
+
+/* =========================
+   Separadores
+========================= */
+hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent) !important;
+  margin: 28px 0 !important;
+}
+
+/* =========================
+   Tablas
+========================= */
+table {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  overflow: hidden !important;
+  table-layout: auto !important;
+}
+
+thead th {
+  background: linear-gradient(180deg, rgba(76, 201, 255, 0.12), rgba(139, 92, 246, 0.08)) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px;
+  white-space: nowrap !important;
+}
+
+th,
+td {
+  padding: 14px 16px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  vertical-align: top !important;
+  line-height: 1.6 !important;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.018) !important;
+}
+
+tbody tr:hover {
+  background: rgba(76, 201, 255, 0.06) !important;
+  transition: 0.2s ease;
+}
+
+td strong,
+th strong {
+  color: #ffffff !important;
+}
+
+/* =========================
+   Código / badges
+========================= */
+code {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 2px 8px !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+
+pre {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  padding: 16px 18px !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+  line-height: 1.7 !important;
+}
+
+pre code {
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  white-space: inherit !important;
+  overflow-wrap: inherit !important;
+  word-break: inherit !important;
+  color: inherit !important;
+}
+
+table code {
+  display: inline !important;
+  max-width: none !important;
+}
+
+td,
+th,
+pre,
+code {
+  box-sizing: border-box !important;
+}
+
+/* =========================
+   Imágenes
+========================= */
+img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .wrapper {
+    width: calc(100vw - 20px) !important;
+  }
+
+  section {
+    margin: 20px auto !important;
+    padding: 24px 20px !important;
+    border-radius: 18px !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.45rem !important;
+  }
+
+  th,
+  td {
+    padding: 12px 12px !important;
+  }
+
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: normal !important;
+  }
+}
