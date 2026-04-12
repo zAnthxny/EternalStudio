@@ -1,4 +1,4 @@
-# FAQ, soporte y mantenimiento
+# FAQ
 
 Esta pagina centraliza diagnostico, preguntas frecuentes, soporte, licencia y una plantilla de changelog preparada para publicacion.
 
