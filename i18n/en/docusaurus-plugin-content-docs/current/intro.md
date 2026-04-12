@@ -205,7 +205,7 @@ NovaRestore fits especially well in:
 
 - Discord: [NovaStudios](https://discord.gg/zeSHUQXPuz)
 
-## Short marketplace text
+## NOTE:
 
 > NovaRestore professionalizes inventory rollback on Paper. It stores every death with real context, lets staff review it through a clear GUI, sends requests with Discord approval, supports full, partial, or item-specific restorations, and keeps exportable audit logs for serious staff teams. Ideal for servers that want premium support, operational control, and player trust.
 
