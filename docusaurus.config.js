@@ -17,7 +17,11 @@ const config = {
   projectName: 'NovaStudios',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+  hooks: {
+    onBrokenMarkdownLinks: 'warn',
+  },
+},
 
   i18n: {
     defaultLocale: 'es',
