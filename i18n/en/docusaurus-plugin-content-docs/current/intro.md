@@ -26,8 +26,6 @@ NovaRestore is a professional Paper plugin that stores death snapshots, lets sta
 
 ## Wiki map
 
-This documentation was condensed into six pages so it is easy to maintain and publish on GitHub:
-
 | Page | Content |
 | --- | --- |
 | [Introduction](/) | General presentation, benefits, compatibility, navigation map, and commercial positioning |
